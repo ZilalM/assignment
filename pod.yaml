@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: assignment
+  labels:
+    tier: front-end
+spec:
+  containers:
+  - name: assignment
+    image: zilal/assignment
+    ports:
+    - containerPort: 80

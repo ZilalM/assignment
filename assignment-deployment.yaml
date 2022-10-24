@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assignment-deployment
+  labels:
+    tier: front-end
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      tier: front-end
+  template:
+    metadata:
+      name: assignment
+      labels:
+        tier: front-end
+    spec:
+      containers:
+      - name: assignment
+        image: zilal/assignment
+        ports:
+        - containerPort: 80
+
